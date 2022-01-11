@@ -1,8 +1,15 @@
 import React, { Component, useState } from "react";
+import classes from "../styles/styles.module.css";
 
 const AnswerItem = (props: any) => {
-  console.log("AI", props);
-
-  return <li key={props.index}>{props.answer.text}</li>;
+  return (
+    <li
+      key={props.index}
+      className={classes.Item}
+      onClick={() => props.onAnswerClick(props.answer.id)}
+    >
+      {props.answer.text}
+    </li>
+  );
 };
 export default AnswerItem;

@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import AnswerList from "../../components/ActiveQuiz/AnswerList/AnswerList";
+import classes from "./styles/styles.module.css";
 
 const ActiveQuiz = (props: any) => {
-  console.log("AQProps", props);
-
   return (
-    <div>
-      <p style={{ display: "flex", justifyContent: "space-evenly" }}>
+    <div className={classes.ActiveQuiz}>
+      <p className={classes.QuestFlex}>
         <span>
-          <strong>1.</strong>
-          Quiestion AAA
+          <strong>id </strong>
+          {props.question}
         </span>
-        <small>1 from 15</small>
+        <small>1 from {props.question.length}</small>
       </p>
-      <AnswerList answers={props.answers} />
+      <AnswerList answers={props.answers} onAnswerClick={props.onAnswerClick} />
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.Quiz {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.Container {
+  background-color: cornflowerblue;
+  height: 100vh;
+}
